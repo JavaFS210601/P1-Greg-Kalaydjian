@@ -5,4 +5,9 @@ public class Placeholder {
 	
 	//Remember your project won't have a launcher!! 
 	//it'll have a master servlet though 
+	
+	public static void main(String[] args)
+	{
+		
+	}
 }
