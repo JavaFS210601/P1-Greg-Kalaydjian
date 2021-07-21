@@ -34,7 +34,7 @@ public class ConnectionUtil {
 		
 			//	//We need to provide our database credentials
 			//	//We'll hardcode them for now, but we'll see how to hide this username/password in environment variables
-			String url = "jdbc:postgresql://javafs210601.cvbm9aejcfkb.us-east-2.rds.amazonaws.com:5432/postgres?currentSchema=P1Demo";
+			String url = "";
 			String username = "postgres";
 			String password = "password"; //this will be whatever password you set in postgres (or RDS if you're using that)
 		
