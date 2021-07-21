@@ -32,10 +32,10 @@ public class Ers_Reimbursement_Service {
 		}
 		
 		public void acceptDenyReimbursement(int reimb_type_id, int reimb_status_id) {
-			if(reimb_status_id > 0 && reimb_status_id < 4) {
+			if(reimb_status_id >= 1 && reimb_status_id <= 3) {
 				Ers_Reimbursement_DAO.acceptDenyReimbursement(reimb_type_id, reimb_status_id);
 			}else {
 				System.out.println("Failed to accept or deny reimbursement in the acceptDenyReimbursement method in Ers_Reimbursement_Service.java");
 			}
-		}	
+		}
 }
