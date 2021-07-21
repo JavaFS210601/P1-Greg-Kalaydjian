@@ -28,7 +28,7 @@ public class Ers_User_Roles_DAO implements Ers_User_Roles_Interface {
 			
 			while(rs.next()) { //while there are still rows in our ResultSet
 				
-				//make a new Avenger object for each row
+				//make a new Ers_User_Roles object for each row
 				Ers_User_Roles a = new Ers_User_Roles (
 					rs.getInt("ers_user_role_id"),
 					rs.getString("user_role")
@@ -49,4 +49,47 @@ public class Ers_User_Roles_DAO implements Ers_User_Roles_Interface {
 		}
 		return null;
 	}
+	
+	/*
+	@Override
+	public Ers_User_Roles getErs_User_RolesById(int i) {
+
+		try(Connection conn = ConnectionUtil.getConnection()) {
+			
+			String sql = "SELECT * FROM \"ERS\".ers_user_roles WHERE ers_user_role_id = ?;";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, name); //set our wildcard to the parameter given in the method
+			
+			ResultSet rs = ps.executeQuery(); //the results of our query will be put into the ResultSet object
+			
+			if(rs.next()) { //we won't need a while loop, we're only expecting one result
+				
+				//Just for the sake of showing you a different way to populate a Home object...
+				//...using the setters instead of the constructor like we did in getAllAvengers()	
+				Home h = new Home(); //instantiate an empty home object
+				
+				//use the setters to populate its fields
+				h.setHome_name(name); //this can just be the name object getting sent in from the parameters
+				h.setHome_address(rs.getString("home_address"));
+				h.setHome_city(rs.getString("home_city"));
+				h.setHome_state(rs.getString("home_state"));
+				h.setHome_zip(rs.getString("home_zip"));
+			
+				return h; //return the home object
+			}
+		
+			
+		} catch (SQLException e) {
+			System.out.println("Couldn't get home by name");
+			e.printStackTrace();
+		}
+		
+		
+		
+		return null;
+	}
+	*/
+
 }

@@ -9,12 +9,12 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.LoginDTO;
-import com.revature.services.LoginService;
+import com.revature.services.EmployeeLoginService;
 
-public class LoginController {
+public class EmployeeLoginController {
 
 	ObjectMapper om = new ObjectMapper(); //so we can work with JSON
-	private LoginService ls = new LoginService();
+	private EmployeeLoginService ls = new EmployeeLoginService();
 	
 	public void login(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
@@ -54,14 +54,14 @@ public class LoginController {
 				HttpSession ses = req.getSession(); //return a Session to hold user info (if one doesn't exist yet)
 				//remember, sessions are how you remember the different users on the client
 	
-
-//				
-//					Cookie[] cookies = req.getCookies();
-//					for (cookie : cookies) {
-//						info.log(cookie);
-//					}
-//				
-//				); //this is how I'd assume you can log cookies, getCookies returns an array
+				
+				//				
+				//					Cookie[] cookies = req.getCookies();
+				//					for (cookie : cookies) {
+				//						info.log(cookie);
+				//					}
+				//				
+				//				); //this is how I'd assume you can log cookies, getCookies returns an array
 				
 				//this info stays on the server, all the client gets is the request's cookie created by getSession()
 				//when a user gets a session, they get a cookie returned that uniquely identifies their session

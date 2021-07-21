@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERS Systems</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--I just googled "bootstrap cdn" and this ^^^ was in the second link under "CSS"-->
+    <!--Thanks to bootstrap, we can style elements using the class attribute-->
+
+     <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+     <!--Custom styles-->
+     <link rel="stylesheet" type="text/css" href="Login.css">
+
+
+</head>
+<body>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container" id="fullcontainer">
+        <!--We need a div called container to hold all the bootstrap stuff-->
+        <!--only to be added after adding login functionality in back end-->
+        <div id="login-row1" class="row">
+            <h4 class="col-lg-20">Employee Login:</h4>
+        <label>
+            <input id="EmployeeUsername" type="text" placeholder="username" class="col-sm-3 form-control">
+        </label>
+            <input id="EmployeePassword" type="password" placeholder="password" class="col-sm-3 form-control">  
+            <button id="loginButtonForEmployees" class="btn btn-dark">Login</button>  
+        </div>
+    </div>
+
+    <div class="container" id="fullcontainer">
+        <!--We need a div called container to hold all the bootstrap stuff-->
+        <!--only to be added after adding login functionality in back end-->
+        <div id="login-row2" class="row">
+            <h4 class="col-lg-20">Management Login:</h4>
+        <label>
+            <input id="ManagerUsername" type="text" placeholder="username" class="col-sm-3 form-control">
+        </label>
+            <input id="ManagerPassword" type="password" placeholder="password" class="col-sm-3 form-control">  
+            <button id="loginButtonForManagement" class="btn btn-dark">Login</button>    
+        </div>
+    <script src="Login.js"></script>
+</body>
+</html>

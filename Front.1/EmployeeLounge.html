@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Lounge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--I just googled "bootstrap cdn" and this ^^^ was in the second link under "CSS"-->
+    <!--Thanks to bootstrap, we can style elements using the class attribute-->
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+     <!--Custom styles-->
+     <link rel="stylesheet" type="text/css" href="EmployeeLounge.css">
+</head>
+<body>
+    Welcome to the employee lounge
+    <div id="table-row" class="row">
+        <!--Then we need rows inside the container to organize it-->
+            <table id="pastTicketTable" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Reimbursement ID</th>
+                        <th>Amount: </th>
+                        <th>Submitted Time: </th>
+                        <th>Resolved Time: </th>
+                        <th>Description: </th>
+                        <th>Author ID: </th>
+                        <th>Resolver ID: </th>
+                        <th>Status ID: </th>
+                        <th>Type ID: </th>
+                    </tr>
+                </thead>
+                <tbody id="pastTicketBody">
+                    <!--We're going to leave the table body blank!-->
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <button id="getPastTicketsButton" class="btn btn-success">Get Past Tickets</button> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        CREATE TICKET:
+        <br>
+        Input Reimbursement Type ID: (1. Undetermined, 2. Lodging, 3. Food, 4. Travel, 5. Other)
+        <form>
+            <input type="text" id ="typeID" placeholder ="Type ID">
+        </form>
+        <br>
+
+        How much are you requesting? Whole numbers only.
+        <form>
+            <input type="text" id ="requestAmount" placeholder ="Amount">
+        </form>
+        <br>
+
+        Describe why you are requesting this amount.
+        <form>
+            <input type="text" id ="descriptionText" placeholder ="Amount">
+        </form>
+        <br>
+
+
+        <button id="createTicketButton" class="btn btn-success">Create Ticket</button> 
+        
+    </div>
+
+    <script src="EmployeeLounge.js"></script>
+</body>
+</html>

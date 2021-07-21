@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Lounge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--I just googled "bootstrap cdn" and this ^^^ was in the second link under "CSS"-->
+    <!--Thanks to bootstrap, we can style elements using the class attribute-->
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="ManagerLounge.css">
+</head>
+<body>
+    Welcome to the Manager Lounge
+    <!--Table Here For Tickets-->
+    <div id="table-row" class="row">
+        <!--Then we need rows inside the container to organize it-->
+            <table id="pastTicketTable" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Reimbursement ID</th>
+                        <th>Amount: </th>
+                        <th>Submitted Time: </th>
+                        <th>Resolved Time: </th>
+                        <th>Description: </th>
+                        <th>Author ID: </th>
+                        <th>Resolver ID: </th>
+                        <th>Status ID: </th>
+                        <th>Type ID: </th>
+                    </tr>
+                    </thead>
+                    <tbody id="pastTicketBody">
+                    <!--We're going to leave the table body blank!-->
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <button id="getPastTicketsButton" class="btn btn-success">Show All Tickets</button> 
+        <button id="filterTicketsUnresolved" class="btn btn-success">Show Unresolved Tickets</button> 
+        <button id="filterTicketsAccepted" class="btn btn-success">Show Accepted Tickets</button> 
+        <button id="filterTicketsDeclined" class="btn btn-success">Show Declined Tickets</button> 
+
+        <!--Accept/Deny Ticket-->
+        <br>
+        <br>
+        <br>
+        ACCEPT/DENY REIMBURSEMENT:
+        <br>
+        Input Reimbursement ID: "ID of Ticket"
+        <form>
+            <input type="text" id ="reimbursement_ID" placeholder ="Type Reimb_ID">
+        </form>
+
+        <br><br>
+        Type a result for the ticket. (Whole Numbers Only).
+        <br>
+        1. Unresolved
+        2. Accepted
+        3. Declined
+        <form>
+            <input type="text" id ="result" placeholder ="Type Result ID">
+        </form>
+        <br>
+        <button id="acceptDenyButton" class="btn btn-success">Update Ticket</button> 
+
+
+
+
+
+
+    <script src="ManagerLounge.js"></script>
+</html>
